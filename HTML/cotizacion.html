@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cotización - GeSports</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../img/favicon.png" type="image/png" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-success"
+      role="navigation"
+      aria-label="Navegación principal"
+    >
+      <div class="container-fluid justify-content-center gap-2 py-2">
+        <a
+          class="btn btn-dark text-white"
+          href="../index.html"
+          aria-label="Ir a la página de inicio"
+          >Inicio</a
+        >
+        <a
+          class="btn btn-dark text-white"
+          href="services.html"
+          aria-label="Ir a la página de servicios"
+          >Servicios</a
+        >
+        <a
+          class="btn btn-dark text-white"
+          href="faq.html"
+          aria-label="Ir a la sección de preguntas frecuentes"
+          >FAQ</a
+        >
+        <a
+          class="btn btn-dark text-white"
+          href="about.html"
+          aria-label="Ir a la página acerca de GeSports"
+          >Acerca</a
+        >
+        <a
+          class="btn btn-dark text-white"
+          href="contact.html"
+          aria-label="Ir a la página de contacto"
+          >Contacto</a
+        >
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <main class="content container py-4">
+        <h2 class="text-center mb-4">Solicitar Cotización</h2>
+        <form action="gracias.html">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              placeholder="Ingresá tu nombre completo"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label">Seleccioná el medio de pago</label>
+            <select class="form-select" id="metodoPago" required>
+              <option value="selected disabled">Elige una opción</option>
+              <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+              <option value="transferencia">Transferencia Bancaria</option>
+            </select>
+          </div>
+
+          <div class="container my-4">
+            <h3 class="mb-3">Seleccione su tarjeta</h3>
+            <div class="mb-3">
+              <select
+                class="form-select"
+                id="cardSelect"
+                onchange="document.getElementById('cardInput').value = this.value;"
+              >
+                <option value="">-- Seleccione --</option>
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="American Express">American Express</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="numeroTarjeta" class="form-label"
+                >Número de tarjeta</label
+              >
+              <input
+                type="text"
+                id="numeroTarjeta"
+                class="form-control"
+                maxlength="16"
+                placeholder="xxxx xxxx xxxx xxxx"
+              />
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="vencimiento" class="form-label"
+                  >Fecha de vencimiento</label
+                >
+                <input
+                  type="text"
+                  id="vencimiento"
+                  class="form-control"
+                  placeholder="MM/AA"
+                />
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="cvv" class="form-label"
+                  >Código CVV
+                  <span class="cvv-tooltip">?</span>
+                </label>
+                <input
+                  type="text"
+                  id="cvv"
+                  class="form-control"
+                  maxlength="4"
+                  placeholder="123"
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="titular" class="form-label"
+                >Titular de la tarjeta</label
+              >
+              <input
+                type="text"
+                id="titular"
+                class="form-control"
+                placeholder="Nombre tal como aparece en la tarjeta"
+              />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="ejemplo@correo.com"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="producto" class="form-label">Producto o servicio</label>
+            <input
+              type="text"
+              class="form-control"
+              id="producto"
+              placeholder="Indicá qué producto o servicio querés"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="mensaje" class="form-label"
+              >Detalles del Producto</label
+            >
+            <textarea
+              class="form-control"
+              id="mensaje"
+              rows="4"
+              placeholder="Agregá información adicional sobre tu elección"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-success">Comprar</button>
+        </form>
+      </main>
+
+      <footer class="bg-primary text-white text-center p-3">
+        <p>© 2025 GeSports. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

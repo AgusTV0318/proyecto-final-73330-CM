@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Descubrí los servicios deportivos de GeSports: entrenamientos personalizados, gimnasio, indumentaria especializada y competencias únicas."
+    />
+    <meta
+      name="keywords"
+      content="GeSports, servicios deportivos, entrenamiento personalizado, gimnasio, ropa deportiva, competencias fitness"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <title>GeSports Servicios y Productos Personalizados</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <link rel="icon" href="../img/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <header class="bg-primary text-white text-center p-4">
+      <h1>Servicios GeSports</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+      <div class="container-fluid justify-content-center gap-2 py-2">
+        <a class="btn btn-dark text-white" href="../index.html">Inicio</a>
+        <a class="btn btn-dark text-white" href="services.html">Servicios</a>
+        <a class="btn btn-dark text-white" href="faq.html">FAQ</a>
+        <a class="btn btn-dark text-white" href="about.html">Acerca</a>
+        <a class="btn btn-dark text-white" href="contact.html">Contacto</a>
+      </div>
+    </nav>
+
+    <main class="container py-4">
+      <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+          <h2>Bienvenido</h2>
+          <p>
+            Está es la sección de servicios, donde encontrará el corazón de
+            GeSports. Aquí tendras desde tu lugar para las rutinas, gimnasio y
+            maquinarias; Hasta todo tipo de indumentarias hechas por nuestros
+            especialistas para un mayor comfort o un mayor rendimiento.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="../img/gesports_empresa_depopng.png"
+            alt="Servicios deportivos"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+      </div>
+
+      <div class="accordion" id="servicesAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="ser1">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#s1"
+              aria-expanded="true"
+              aria-controls="s1"
+            >
+              Entrenamiento personalizado
+            </button>
+          </h2>
+          <div
+            id="s1"
+            class="accordion-collapse collapse show"
+            aria-labelledby="ser1"
+            data-bs-parent="#servicesAccordion"
+          >
+            <div class="accordion-body">
+              Ofrecemos planes hecho por nuestro equipo especializado. O si bien
+              optas por crear tu propia rutina, podrás hacerlo.
+            </div>
+          </div>
+
+          <section class="container my-5">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card h-100 shadow bg-light text-dark">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Catalógo</h5>
+                    <p class="card-text">
+                      Acá estan todos los productos con los qué contamos
+                      actualmente.
+                    </p>
+                    <a href="productos.html" class="btn btn-primary">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="ser2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#s2"
+              >
+                Competencias
+              </button>
+            </h2>
+            <div
+              id="s2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#servicesAccordion"
+            >
+              <div class="accordion-body">
+                Haremos compentencias para los más enfocados en el conecpto y
+                participaremos en los próximos eventos.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-primary text-white text-center p-3 mt-4">
+      <p>© 2025 GeSports. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive-text($min, $max) {
+  font-size: clamp(#{$min}px, 2vw, #{$max}px);
+}
+
+@mixin card-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@mixin transition($property: all, $duration: 0.3s, $ease: ease) {
+  transition: #{$property} #{$duration} #{$ease};
+}

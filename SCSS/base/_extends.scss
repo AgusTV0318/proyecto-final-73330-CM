@@ -1,0 +1,24 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+%button-style {
+  background-color: v.$primary-color;
+  color: v.$text-color;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  @include m.transition(background-color);
+  &:hover {
+    background-color: dark(v.$primary-color, 10%);
+  }
+}
+
+%card-style {
+  background-color: v.$background-color;
+  border-radius: 10px;
+  padding: 0.3rem;
+  @include m.card-shadow;
+  font-family: v.$font-stack;
+}
