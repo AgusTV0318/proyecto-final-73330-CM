@@ -602,4 +602,19 @@ a.btn-outline-primary {
   font-weight: bold;
 }
 
+.tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #dc3545;
+  color: #fff;
+  cursor: help;
+  margin-left: 6px;
+}
+
 /*# sourceMappingURL=style.css.map */

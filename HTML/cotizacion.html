@@ -9,7 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="icon" href="../img/favicon.png" type="image/png" />
+    <link rel="icon" href="../IMG/favicon.png" type="image/png" />
   </head>
 
   <body>
@@ -73,6 +73,7 @@
               <option value="selected disabled">Elige una opción</option>
               <option value="tarjeta">Tarjeta de Crédito/Débito</option>
               <option value="transferencia">Transferencia Bancaria</option>
+              <option value="mercadopago">Mercado Pago</option>
             </select>
           </div>
 
@@ -82,7 +83,8 @@
               <select
                 class="form-select"
                 id="cardSelect"
-                onchange="document.getElementById('cardInput').value = this.value;"
+                name="tarjeta"
+                required
               >
                 <option value="">-- Seleccione --</option>
                 <option value="Visa">Visa</option>
@@ -159,13 +161,83 @@
 
           <div class="mb-3">
             <label for="producto" class="form-label">Producto o servicio</label>
-            <input
-              type="text"
-              class="form-control"
-              id="producto"
-              placeholder="Indicá qué producto o servicio querés"
-              required
-            />
+            <select class="form-select" id="producto" name="producto" required>
+              <option value="">-- Seleccione --</option>
+              <option value="indumentaria">Indumentaria</option>
+              <option value="extras">Extras</option>
+              <option value="gym">Gimnasio</option>
+            </select>
+          </div>
+
+          <div class="mb-3 d-none" id="opcionesIndumentaria">
+            <label for="tipoIndumentaria" class="form-label"
+              >Tipo de indumentaria
+              <span
+                class="tooltip-icon"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="En caso de no haber elegido este producto seleccione 'No Seleccionado'."
+                >!</span
+              >
+            </label>
+            <select
+              class="form-select"
+              id="tipoIndumentaria"
+              name="tipoIndumentaria"
+            >
+              <option value="">-- Seleccione --</option>
+              <option value="casual">Casual</option>
+              <option value="intermedio">Intermedio</option>
+              <option value="competitivo">Competitivo</option>
+              <option value="noseleccionado">No Seleccionado</option>
+            </select>
+          </div>
+
+          <div class="mb-3 d-none" id="opcionesExtras">
+            <label for="extraSeleccion" class="form-label"
+              >Extras disponibles
+              <span
+                class="tooltip-icon"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="En caso de no haber elegido este producto seleccione 'No Seleccionado'."
+                >!</span
+              ></label
+            >
+            <select
+              class="form-select"
+              id="extraSeleccion"
+              name="extraSeleccion"
+            >
+              <option value="">-- Seleccione --</option>
+              <option value="pelotas">Pelotas</option>
+              <option value="bandaselasticas">Bandas Elásticas</option>
+              <option value="botellasdeportivas">Botellas Deportivas</option>
+              <option value="#">Pulsómetros</option>
+              <option value="#">Rodillos de Espuma</option>
+              <option value="noseleccionado">No Seleccionado</option>
+            </select>
+          </div>
+
+          <div class="mb-3 d-none" id="opcionesGym">
+            <label for="cuota" class="form-label"
+              >Tipo de cuota
+              <span
+                class="tooltip-icon"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="En caso de no haber elegido este producto seleccione 'No Seleccionado'."
+                >!</span
+              ></label
+            >
+            <select class="form-select" id="cuota" name="cuota">
+              <option value="">-- Seleccione --</option>
+              <option value="mensual">Mensual</option>
+              <option value="trimestral">Trimestral</option>
+              <option value="semestral">Semestral</option>
+              <option value="anual">Anual</option>
+              <option value="noseleccionado">No Seleccionado</option>
+            </select>
           </div>
 
           <div class="mb-3">
